@@ -5,18 +5,21 @@ import './App.scss';
 const newsItems = [
     {
         title: '367 modERN datasets released',
+        path: '/news/367-modern-datasets-released',
         excerpt: (
             <p>We are pleased to announced that a whopping 367 modERN datasets have just been released in the ENCODE portal. <a href="/search/?type=Experiment&amp;status=released&amp;award.project=modERN&amp;advancedQuery=date_released:[2016-07-01%20TO%202016-07-31]\">Click here</a> for details.</p>
         ),
     },
     {
         title: 'Release of Annotation File Sets',
+        path: '/news/release-of-annotation-file-sets',
         excerpt: (
             <p>With collaborations from the DAC (Data Analysis Center), a total of 336 Annotation File Sets of promoter-like and enhancer-like regions have been released. You can find them <a href="/search/?type=Annotation&amp;encyclopedia_version=ENCODE+v3&amp;advancedQuery=date_released:[2016-08-01%20TO%202016-08-31]">here</a>.</p>
         ),
     },
     {
         title: 'Mouse e10.5 Histone ChIP-seq Dataset',
+        path: '/news/mouse-e10-5-histone-chip-seq-dataset',
         excerpt: (
             <p>Mouse e10.5 histone ChIP-seq dataset from from the Ren lab available on the portal are available <a href="http://bit.ly/29Uma1K">here</a>.</p>
         ),
@@ -39,7 +42,7 @@ const News = () => (
         <div className="news__items">
             {newsItems.map(newsItem => (
                 <div className="news__item">
-                    <h3>{newsItem.title}</h3>
+                    <h3><a href={newsItem.path}>{newsItem.title}</a></h3>
                     <div className="news__excerpt">
                         {newsItem.excerpt}
                     </div>

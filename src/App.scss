@@ -1,0 +1,62 @@
+.page {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.header {
+    padding: 20px 0;
+}
+
+
+.content {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+
+.news {
+    flex: 0 0 60%;
+
+    h2 {
+        margin-bottom: 0;
+    }
+
+    @at-root #{&}__items {
+        padding: 10px;
+        border: 1px solid #000;
+        background-color: #eee;
+    }
+
+    @at-root #{&}__item {
+        h3 {
+            margin: 0;
+        }
+    }
+}
+
+
+.login {
+    flex: 0 0 38%;
+
+    h2 {
+        margin-bottom: 0;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    form {
+        padding: 10px;
+        border: 1px solid #000;
+        background-color: #eef;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+}
